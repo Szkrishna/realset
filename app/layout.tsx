@@ -3,19 +3,26 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Nestovian — Arrive Move Settle",
-  description: "Nestovian by Realset Pvt Ltd — Premium relocation solutions for expatriates and corporate teams. Residential leasing, service apartments, city orientation and more.",
-  keywords: ["relocation", "expatriate", "corporate housing", "Gurgaon", "Nestovian", "Realset"],
+  description:
+    "Nestovian by Realset Pvt Ltd — Premium relocation solutions for expatriates and corporate teams. Residential leasing, service apartments, city orientation and more.",
+  keywords: [
+    "relocation",
+    "expatriate",
+    "corporate housing",
+    "Gurgaon",
+    "Nestovian",
+    "Realset",
+  ],
   authors: [{ name: "Realset Pvt Ltd" }],
   manifest: "/site.webmanifest",
   icons: {
     icon: [
-      { url: "/favicon.ico", rel: "shortcut icon" },
+      { url: "/favicon.ico" },
       { url: "/favicon-96x96.png", sizes: "96x96", type: "image/png" },
       { url: "/favicon.svg", type: "image/svg+xml" },
     ],
     apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
-    other: [{ url: "/icon.png", sizes: "512x512", type: "image/png" }],
-  },
+  }
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

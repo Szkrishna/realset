@@ -36,7 +36,6 @@ export default function Home() {
   const next = useCallback(() => goTo(current + 1, "next"), [current, goTo]);
   const prev = useCallback(() => goTo(current - 1, "prev"), [current, goTo]);
 
-
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
       if (e.key === "ArrowRight") { next(); }
@@ -56,24 +55,20 @@ export default function Home() {
 
   return (
     <div className="page-wrap">
-
       {/* ── TOPBAR ── */}
       <nav className="topbar">
         <div className="topbar-logo">Nesto<span>vian</span></div>
         <div className="topbar-badge">Company Profile</div>
         <a href="mailto:hello@nestovian.in" className="topbar-cta">Get in Touch</a>
       </nav>
-
       {/* ── MAIN ── */}
       <div className="main">
-
         {/* Slide header */}
         <div className="slide-header">
           <span className="slide-num">{String(current + 1).padStart(2, "0")}</span>
           <span className="slide-title">{SLIDES[current].title}</span>
           <span className="slide-counter">{current + 1} of {SLIDES.length}</span>
         </div>
-
         {/* Stage */}
         <div className="stage-wrap" onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
           <img
@@ -97,19 +92,16 @@ export default function Home() {
             </svg>
           </button>
         </div>
-
         {/* Progress bar */}
         <div className="progress-track">
           <div className="progress-fill" style={{ width: `${((current + 1) / SLIDES.length) * 100}%` }} />
         </div>
-
         {/* Divider */}
         <div className="section-divider">
           <div className="divider-line" />
           <span className="divider-label">Contact & Office</span>
           <div className="divider-line" />
         </div>
-
         {/* Contact grid */}
         <div className="footer-grid">
           <div className="footer-cell">
@@ -151,15 +143,12 @@ export default function Home() {
             </div>
           </div>
         </div>
-
       </div>
-
       {/* ── BOTTOM BAR ── */}
       <div className="bottom-bar">
         <span className="bottom-logo">NESTOVIAN</span>
         <span className="bottom-copy">© {year ?? ""} Realset Pvt Ltd · All rights reserved</span>
       </div>
-
     </div>
   );
 }

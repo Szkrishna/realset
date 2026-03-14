@@ -39,8 +39,8 @@ export default function Home() {
 
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
-      if (e.key === "ArrowRight") { setPlaying(false); next(); }
-      else if (e.key === "ArrowLeft") { setPlaying(false); prev(); }
+      if (e.key === "ArrowRight") { next(); }
+      else if (e.key === "ArrowLeft") { prev(); }
     };
     window.addEventListener("keydown", handler);
     return () => window.removeEventListener("keydown", handler);
@@ -50,7 +50,7 @@ export default function Home() {
   const onTouchEnd = (e: React.TouchEvent) => {
     if (touchStartX.current === null) return;
     const dx = e.changedTouches[0].clientX - touchStartX.current;
-    if (Math.abs(dx) > 40) { setPlaying(false); dx < 0 ? next() : prev(); }
+    if (Math.abs(dx) > 40) { dx < 0 ? next() : prev(); }
     touchStartX.current = null;
   };
 
@@ -86,12 +86,12 @@ export default function Home() {
                 : direction === "next" ? "in-next"  : "in-prev"
             }`}
           />
-          <button className="arrow-btn arrow-prev" onClick={() => { setPlaying(false); prev(); }} aria-label="Previous">
+          <button className="arrow-btn arrow-prev" onClick={() => { prev(); }} aria-label="Previous">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <polyline points="15 18 9 12 15 6"/>
             </svg>
           </button>
-          <button className="arrow-btn arrow-next" onClick={() => { setPlaying(false); next(); }} aria-label="Next">
+          <button className="arrow-btn arrow-next" onClick={() => { next(); }} aria-label="Next">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <polyline points="9 18 15 12 9 6"/>
             </svg>

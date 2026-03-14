@@ -514,7 +514,7 @@ kbd {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 0.5rem;
-  margin-top: 2rem;
+  color: #71717A;
 }
 .bottom-logo {
   font-size: 0.85rem;

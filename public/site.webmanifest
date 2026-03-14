@@ -1,7 +1,6 @@
 {
-  "name": "Nestovian — Arrive Move Settle",
-  "short_name": "Nestovian",
-  "description": "Premium relocation solutions for expatriates and corporate teams.",
+  "name": "MyWebSite",
+  "short_name": "MySite",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
@@ -14,15 +13,9 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
-    },
-    {
-      "src": "/icon.png",
-      "sizes": "512x512",
-      "type": "image/png"
     }
   ],
-  "theme_color": "#D4A853",
-  "background_color": "#080808",
-  "display": "standalone",
-  "start_url": "/"
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "display": "standalone"
 }
